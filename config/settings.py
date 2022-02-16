@@ -29,9 +29,10 @@ SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 DEBUG = os.environ['DJANGO_DEBUG']
 
 ENV_DOMAIN = os.environ['ENV_DOMAIN']
+ADMIN_PATH = os.environ['ADMIN_PATH']
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.1.153']  # '.herokuapp.com']
-
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.1.153']
+ALLOWED_HOSTS += ENV_DOMAIN
 
 # Application definition
 

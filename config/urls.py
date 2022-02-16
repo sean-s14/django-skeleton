@@ -15,13 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
 
 # Temporary
 from .views import home
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    # path('auth/', include('custom_auth.urls')),
+    path(settings.ADMIN_PATH + '/', admin.site.urls),
+    # path('auth/', include('custom_auth.urls')),  # Optional
     path('', home, name='home'),  # Temporary
     path('', include('custom_pwa.urls')),
 ]

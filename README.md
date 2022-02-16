@@ -33,3 +33,11 @@ Runserver shortcut (runs on port 9000):
 ```
 ./server.sh
 ```
+
+---
+**Watch Sass**
+In a separate terminal
+```
+cd static/css
+sass --watch main.sass main.css
+```
