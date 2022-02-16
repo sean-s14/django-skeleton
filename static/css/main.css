@@ -1,3 +1,20 @@
+/* Error: There's already a module with namespace "module".
+ *   ,
+ * 1 | @use './base/_module'
+ *   | ===================== original @use
+ * 2 | @use './components/_module'
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^ new @use
+ *   '
+ *   _modules.sass 2:1  @use
+ *   main.sass 1:1      root stylesheet */
 
-
-/*# sourceMappingURL=main.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: There's already a module with namespace \"module\".\a   \2577 \a 1 \2502  @use './base/_module'\d\a   \2502  \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  original @use\a 2 \2502  @use './components/_module'\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^ new @use\a   \2575 \a   _modules.sass 2:1  @use\a   main.sass 1:1      root stylesheet";
+}
