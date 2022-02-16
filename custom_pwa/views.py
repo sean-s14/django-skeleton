@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 
 from . import app_settings
 
@@ -10,8 +10,6 @@ def service_worker(request):
         content_type='application/javascript'
     )
     return response
-    # TODO: Request to add this line
-    # return render(request, 'serviceworker.js', {}, content_type='application/javascript')
 
 
 def manifest(request):
@@ -24,7 +22,4 @@ def manifest(request):
 
 
 def offline(request):
-    print(request)
-    print('Custom Offline Page...')
-    # return redirect('custom_auth:account_view')
     return render(request, "offline.html")
