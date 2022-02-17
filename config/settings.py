@@ -26,15 +26,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ['DJANGO_DEBUG']
+DEBUG = False if os.environ['DJANGO_DEBUG'] == 'False' else True
 
 ENV_DOMAIN = os.environ['ENV_DOMAIN']
 ADMIN_PATH = os.environ['ADMIN_PATH']
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.1.153']
-ALLOWED_HOSTS += ENV_DOMAIN
-
-# Application definition
+ALLOWED_HOSTS = ['localhost', '192.168.1.153', ENV_DOMAIN]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
